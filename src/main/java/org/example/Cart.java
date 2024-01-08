@@ -10,14 +10,15 @@ public class Cart {
     public Cart() {                          //constr
         this.products = new ArrayList<>();
     }
-
+//вивести список товарів в кошику
     public List<Product> getProducts() {
         return products;
     }
+    //додати товар в кошик
     public void addProduct(Product product) {
         this.products.add(product);
     }
-
+//видалити товар з кошика
     public void removeProduct(Product product) {
         this.products.remove(product);
     }

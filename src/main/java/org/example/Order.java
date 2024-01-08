@@ -10,15 +10,15 @@ public class Order {
     //Повинен мати атрибути, такі як `orderId`, `products`, `status`.
     private int orderId;
     private List<Product> products;
-    private OrderStatus status;
+    private String status;
 
 //constr
 public Order(int orderId, List<Product> products, OrderStatus status) {
     this.orderId = orderId;
     this.products = products;
-    this.status = status;
+    this.status = "PROCESSING";
 }
-//ввід / вивід
+//вивід
 public int getOrderId() {
     return orderId;
 }
@@ -31,12 +31,9 @@ public int getOrderId() {
         return status;
     }
 
-}
-//статуси продуктів
-enum OrderStatus {
-    ACCEPTED,
-    PROCESSING,
-    PACKED,
-    SENDING,
-    DELIVERY
+    //встановити новий статус товару
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
 }
