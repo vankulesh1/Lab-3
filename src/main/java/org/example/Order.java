@@ -16,7 +16,7 @@ public class Order {
 public Order(int orderId, List<Product> products, String status) {
     this.orderId = orderId;
     this.products = products;
-    this.status = "PROCESSING";
+    this.status = status;
 }
 
     public Order(List<Product> products) {

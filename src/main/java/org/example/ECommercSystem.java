@@ -103,7 +103,7 @@ public class ECommercSystem {
 
 
 
-    private static Order findOrderById(int orderId, List<Order> orders) {
+    public static Order findOrderById(int orderId, List<Order> orders) {
         for (Order order : orders) {
             if (order.getOrderId() == orderId) {
                 return order;
