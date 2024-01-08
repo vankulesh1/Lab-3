@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 //tests
+=======
+>>>>>>> origin/master
 package org.example;
 import org.example.Cart;
 import org.example.Product;
