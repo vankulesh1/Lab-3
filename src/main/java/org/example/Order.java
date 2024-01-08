@@ -13,12 +13,16 @@ public class Order {
     private String status;
 
 //constr
-public Order(int orderId, List<Product> products, OrderStatus status) {
+public Order(int orderId, List<Product> products, String status) {
     this.orderId = orderId;
     this.products = products;
     this.status = "PROCESSING";
 }
-//вивід
+
+    public Order(List<Product> products) {
+    }
+
+    //вивід
 public int getOrderId() {
     return orderId;
 }
@@ -27,7 +31,7 @@ public int getOrderId() {
         return new ArrayList<>(products);
     }
 
-    public OrderStatus getStatus() {
+    public String getStatus() {
         return status;
     }
 

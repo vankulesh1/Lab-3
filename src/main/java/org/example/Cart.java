@@ -22,4 +22,8 @@ public class Cart {
     public void removeProduct(Product product) {
         this.products.remove(product);
     }
+
+    public void clearCart() {
+        products.clear();
+    }
 }
