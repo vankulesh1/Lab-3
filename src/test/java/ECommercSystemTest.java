@@ -1,23 +1,26 @@
-
 //tests
-
 package org.example;
-import org.example.Cart;
-import org.example.Product;
-import org.example.Order;
-import org.example.OrderStatus;
-import static org.mockito.Mockito.mock;
-import static org.junit.Assert.*;
+
 import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
+
 public class ECommercSystemTest{
 
-    @Test
+     @Test
     public void testAddProductToCart() {
+
+        Product product = mock(Product.class);
+
+        when(product.getId()).thenReturn(1);
+        when(product.getName()).thenReturn("TestProduct");
+        when(product.getPrice()).thenReturn(10.0);
+
         Cart cart = new Cart();
-        Product product = new Product(1, "TestProduct", 10.0);
         cart.addProduct(product);
         assertTrue(cart.getProducts().contains(product));
     }
