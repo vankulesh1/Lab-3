@@ -6,7 +6,7 @@ import org.example.Cart;
 import org.example.Product;
 import org.example.Order;
 import org.example.OrderStatus;
-
+import static org.mockito.Mockito.mock;
 import static org.junit.Assert.*;
 import org.junit.Test;
 import java.util.ArrayList;
@@ -57,4 +57,5 @@ public class ECommercSystemTest{
         assertNotNull(checkOrder);
         assertEquals(OrderStatus.PLACED, checkOrder.getStatus());
     }
+
 }
